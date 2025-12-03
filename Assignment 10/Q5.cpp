@@ -4,7 +4,7 @@ using namespace std;
 
 int findMinKey(int key[], bool mstSet[], int V) {
     int min = INT_MAX;
-    int minIndex;
+    int minIndex = 0;
 
     for (int v = 0; v < V; v++) {
         if (!mstSet[v] && key[v] < min) {

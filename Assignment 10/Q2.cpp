@@ -20,11 +20,16 @@ public:
         if (front == -1) {
             front = 0;
         }
-        rear++;
-        arr[rear] = x;
+        if (rear < 99) {
+            rear++;
+            arr[rear] = x;
+        }
     }
 
     int dequeue() {
+        if (isEmpty()) {
+            return -1;
+        }
         int x = arr[front];
         if (front == rear) {
             front = -1;

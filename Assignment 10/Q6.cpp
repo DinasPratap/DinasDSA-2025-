@@ -4,10 +4,10 @@ using namespace std;
 
 int findMinDistance(int dist[], bool visited[], int V) {
     int min = INT_MAX;
-    int minIndex;
+    int minIndex = 0;
 
     for (int v = 0; v < V; v++) {
-        if (!visited[v] && dist[v] <= min) {
+        if (!visited[v] && dist[v] < min) {
             min = dist[v];
             minIndex = v;
         }
